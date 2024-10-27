@@ -197,6 +197,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 800;
   background-color: blueviolet;
 }
 
@@ -294,19 +295,123 @@ header {
 }
 
 .navbar-mobile {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 24px;
   display: none;
 }
 @media screen and (max-width: 1140px) and (min-width: 960px) {
   .navbar-mobile {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-.menu-mobile {
-  display: none;
+.bx {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  cursor: pointer;
+  z-index: 800;
 }
-@media screen and (max-width: 1140px) and (min-width: 960px) {
-  .menu-mobile {
-    display: block;
-  }
+.bx::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 17%;
+  width: 90%;
+  height: 2px;
+  transition: 0.7s ease;
+  background-color: #82269E;
+}
+.bx::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 17%;
+  width: 60%;
+  height: 2px;
+  transition: 0.7s ease;
+  background-color: #82269E;
+}
+
+.active-bx {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  cursor: pointer;
+  z-index: 800;
+  transition: 0.7s ease;
+}
+.active-bx::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  transform: rotate(-135deg);
+  width: 70%;
+  height: 2px;
+  background-color: #82269E;
+}
+.active-bx::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  transform: rotate(315deg);
+  width: 70%;
+  height: 2px;
+  background-color: #82269E;
+}
+
+.menu-mobile {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F7F2FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, -100px, 0);
+  transition: 1s ease;
+}
+
+.active-menu-mobile {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-list-mobile {
+  max-width: 1440px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link-mobile {
+  display: inline-block;
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  line-height: 130%;
+  color: #555456;
+  padding: 16px 24px;
+  position: relative;
+}
+.nav-link-mobile::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 16px;
+  width: 0;
+  height: 2px;
+  transition: 1s ease;
+  background-color: #A950C4;
+}
+.nav-link-mobile:hover {
+  color: #82269E;
+}
+.nav-link-mobile:hover::after {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

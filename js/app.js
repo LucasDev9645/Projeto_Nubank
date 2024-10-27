@@ -57,3 +57,19 @@ function removeDropdown() {
 dropdownMenu1.addEventListener("mouseleave", removeDropdown);
 dropdownMenu2.addEventListener("mouseleave", removeDropdown);
 dropdownMenu3.addEventListener("mouseleave", removeDropdown);
+
+// MENU MOBILE
+
+function showMenu(toggleId, navId) {
+    const toglle = document.getElementById(toggleId);
+    const nav = document.getElementById(navId);
+
+    if(toglle && nav){
+        toglle.addEventListener("click", () => {
+            nav.classList.toggle("active-menu-mobile");
+            toglle.classList.toggle("active-bx")
+        })
+    }
+}
+
+showMenu("bx", "menu-mobile");
