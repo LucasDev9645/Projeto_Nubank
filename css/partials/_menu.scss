@@ -31,6 +31,10 @@ header {
     @include responsive(md) {
         display: none;
     }
+    
+    @include responsive(sm) {
+        display: none;
+    }
 }
 
 .logo {
@@ -42,8 +46,6 @@ header {
     align-items: center;
 
     z-index: 800;
-
-    background-color: blueviolet;
 }
 
 .navbar-desktop-item-1 {
@@ -177,6 +179,12 @@ header {
     display: none;
 
     @include responsive(md) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    @include responsive(sm) {
         display: flex;
         justify-content: space-between;
         align-items: center;

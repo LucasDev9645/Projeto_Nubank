@@ -190,6 +190,11 @@ header {
     display: none;
   }
 }
+@media screen and (max-width: 960px) {
+  .navbar-desktop {
+    display: none;
+  }
+}
 
 .logo {
   width: 48px;
@@ -198,7 +203,6 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 800;
-  background-color: blueviolet;
 }
 
 .navbar-desktop-item-1 {
@@ -301,6 +305,13 @@ header {
   display: none;
 }
 @media screen and (max-width: 1140px) and (min-width: 960px) {
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 960px) {
   .navbar-mobile {
     display: flex;
     justify-content: space-between;
