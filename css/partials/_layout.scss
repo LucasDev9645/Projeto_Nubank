@@ -140,3 +140,14 @@ $container-sm: 540px;
 .hidden {
     overflow: hidden; 
 }
+
+.hero {
+    height: 90vh;
+
+    @include responsive(md) {
+        height: auto;
+    }
+    @include responsive(sm) {
+        height: auto;
+    }
+}

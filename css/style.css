@@ -99,6 +99,20 @@
   overflow: hidden;
 }
 
+.hero {
+  height: 90vh;
+}
+@media screen and (max-width: 1140px) and (min-width: 960px) {
+  .hero {
+    height: auto;
+  }
+}
+@media screen and (max-width: 960px) {
+  .hero {
+    height: auto;
+  }
+}
+
 h1 {
   color: #161617;
   font-family: "Sora", sans-serif;
@@ -799,6 +813,17 @@ header {
   list-style: none;
   display: flex;
   flex-direction: column;
+}
+.nav-list-mobile svg {
+  width: 36px;
+  height: 36px;
+}
+.nav-list-mobile svg path {
+  stroke: #A6A6A7;
+  transition: 0.7s ease;
+}
+.nav-list-mobile svg:hover path {
+  stroke: #82269E;
 }
 
 .nav-link-mobile {
