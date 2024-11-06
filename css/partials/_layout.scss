@@ -147,6 +147,7 @@ $container-sm: 540px;
     @include responsive(md) {
         height: auto;
     }
+
     @include responsive(sm) {
         height: auto;
     }
