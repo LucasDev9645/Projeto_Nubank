@@ -130,6 +130,22 @@
   }
 }
 
+.list-item {
+  list-style: none;
+  position: relative;
+  padding: 8px 8px 8px 72px;
+  margin-bottom: 48px;
+}
+.list-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
 h1 {
   color: #161617;
   font-family: "Sora", sans-serif;
@@ -266,6 +282,38 @@ a:hover {
 .btn:hover {
   transform: scale(1.02);
   box-shadow: 0px 43px 51px 0px rgba(169, 80, 196, 0.19), 0px 12.963px 15.375px 0px rgba(169, 80, 196, 0.12), 0px 5.384px 6.386px 0px rgba(169, 80, 196, 0.09), 0px 1.947px 2.31px 0px rgba(169, 80, 196, 0.07);
+}
+
+.link {
+  display: inline-block;
+  color: #82269E;
+  background-image: url("../../svg/svg_hero/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  font-size: 18px;
+  padding: 16px 16px 16px 40px;
+  position: relative;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 75%;
+  left: 56px;
+  width: 0%;
+  height: 2px;
+  border-radius: 2px;
+  transition: 0.5s ease;
+  background-color: #BB71D2;
+}
+.link:hover {
+  opacity: 0.8;
+  padding-left: 64px;
+  background-position: 8px 50%;
+}
+.link:hover::after {
+  width: 100%;
+  background-color: #BB71D2;
 }
 
 .s-0 {
@@ -596,6 +644,43 @@ svg, img {
 
 .dropshadow {
   filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+
+.bg-icon-mobile::after {
+  background-image: url("../../svg/svg_hero/icon-mobile.svg");
+  background-size: cover;
+  transition: 0.5s ease;
+  cursor: pointer;
+  filter: drop-shadow(0px 2.31px 3.623px rgba(169, 80, 196, 0.03)) drop-shadow(0px 6.386px 10.017px rgba(169, 80, 196, 0.04)) drop-shadow(0px 15.375px 24.118px rgba(169, 80, 196, 0.05)) drop-shadow(0px 51px 80px rgba(169, 80, 196, 0.08));
+}
+.bg-icon-mobile:hover::after {
+  transform: scale(1.05);
+}
+
+.bg-icon-card::after {
+  background-image: url("../../svg/svg_hero/icon-card.svg");
+  background-size: cover;
+  transition: 0.5s ease;
+  cursor: pointer;
+  filter: drop-shadow(0px 2.31px 3.623px rgba(169, 80, 196, 0.03)) drop-shadow(0px 6.386px 10.017px rgba(169, 80, 196, 0.04)) drop-shadow(0px 15.375px 24.118px rgba(169, 80, 196, 0.05)) drop-shadow(0px 51px 80px rgba(169, 80, 196, 0.08));
+}
+.bg-icon-card:hover::after {
+  transform: scale(1.05);
+}
+
+.bg-icon-check::after {
+  background-image: url("../../svg/svg_hero/icon-check.svg");
+  background-size: cover;
+  transition: 0.5s ease;
+  width: 40px;
+  height: 40px;
+  top: 16px;
+  left: 8px;
+  cursor: pointer;
+  filter: drop-shadow(0px 2.31px 3.623px rgba(169, 80, 196, 0.03)) drop-shadow(0px 6.386px 10.017px rgba(169, 80, 196, 0.04)) drop-shadow(0px 15.375px 24.118px rgba(169, 80, 196, 0.05)) drop-shadow(0px 51px 80px rgba(169, 80, 196, 0.08));
+}
+.bg-icon-check:hover::after {
+  transform: scale(1.05);
 }
 
 .div-card {
